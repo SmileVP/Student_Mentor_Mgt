@@ -1,6 +1,6 @@
 # Student_Mentor_Mgt
 
-Hi Welcome to my Hall Booking API Task.
+Hi Welcome to my Student_Mentor_Mgt Task.
 I have deployed this task in Render.
 https://hall-booking-l4ak.onrender.com
 
