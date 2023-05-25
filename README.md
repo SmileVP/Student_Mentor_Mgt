@@ -2,7 +2,7 @@
 
 Hi Welcome to my Student_Mentor_Mgt Task.
 I have deployed this task in Render.
-https://hall-booking-l4ak.onrender.com
+(https://student-mentor-mgt.onrender.com)
 
 1. We can create a room with https://hall-booking-l4ak.onrender.com/create_room
 Sample request for Creating API:
