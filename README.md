@@ -1,45 +1,54 @@
 # Student_Mentor_Mgt
 
 Hi Welcome to my Student_Mentor_Mgt Task.
+
 I have deployed this task in Render.
-(https://student-mentor-mgt.onrender.com)
+https://student-mentor-mgt.onrender.com
 
-1. We can create a room with https://hall-booking-l4ak.onrender.com/create_room
-Sample request for Creating API:
-{
-    "roomID":"01",
-    "capacity":"60",
-    "amenities":["Security","AC","Reception","Speakers","Generator"],
-    "price":"Rs. 1000"
-}
+1. To get all the student details use the get request in https://student-mentor-mgt.onrender.com/all-students
 
-A success message will be returned as response. {"message": "Room created successfully"}
-
-2. To get the all room Details I have written a get request in https://hall-booking-l4ak.onrender.com/room_details
-
-3. Booking a room with a post request in https://hall-booking-l4ak.onrender.com/room_booking
-
-Sample Body for Booking a room:
-{       
-    "roomID":"01",
-    "customerName":"Vishnu",
-    "date":"23-05-2023",
-    "startTime":"11:00 AM",
-    "endTime":"11:00 PM"
+2. To get the all mentor Details use the get request in https://student-mentor-mgt.onrender.com/all-mentors
  
-}
+3. To add a new mentor use the post request in https://student-mentor-mgt.onrender.com/add-mentor
+   Sample request for Creating API:
+    {
+    "mentorName" : "Raju",
+    "mentorStudent" : ["Anu"]
+    }
+    
+ 4. To add a new student use the post request in https://student-mentor-mgt.onrender.com/add-student
+    Sample request for Creating API:
+    {
+    "studentName":"Gayathri"
+    }
+    
+ 5. To assign new student to existing mentor use the post request in https://student-mentor-mgt.onrender.com/assign-students
+    Sample request for Creating API:
+    {
+    "mentorName" : "Raju",
+    "mentorStudent": ["Gayathri"]
+     }
+    
+ 6. To change mentor of a student use the post request in https://student-mentor-mgt.onrender.com/change-mentor
+     //note: the new mentor name should be in the mentor collection
+    Sample request for Creating API:
+    {
+    "studentName":"Anu",
+    "newMentor":"Kumar"
+    } 
+    
+ 7. To get the mentor details of a particular student use the get request in https://student-mentor-mgt.onrender.com/mentor
+    Sample request for Creating API:
+    {
+    "studentName":"Gayathri"
+    } 
+    
+ 8. To get the student details of a particular mentor use the get request in https://student-mentor-mgt.onrender.com/students
+    Sample request for Creating API:
+    {
+    "mentorName":"Raju"
+    } 
 
-After Successfull booking {"message": "Booking Successful"} response will be returned. 
 
-In case we try to book a room which doesnt exist or already booked the following response will be returned
-
-{
-    "message": "Booking Failed",
-    "instruction": "Check room exist or not and check the availability"
-}
-
-4. We can get the Booked Room details using a get request in https://hall-booking-l4ak.onrender.com/booked-room-details
-
-5. We can get the Booked Customer details using a get request in https://hall-booking-l4ak.onrender.com/booked-customer-details
 
 
